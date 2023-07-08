@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.UidTb = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.Label1 = new System.Windows.Forms.Label();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.PassTb = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -49,22 +49,22 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // materialSingleLineTextField2
+            // UidTb
             // 
-            this.materialSingleLineTextField2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.materialSingleLineTextField2.Hint = "";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(372, 81);
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '\0';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(267, 28);
-            this.materialSingleLineTextField2.TabIndex = 4;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.UidTb.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.UidTb.Depth = 0;
+            this.UidTb.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.UidTb.Hint = "";
+            this.UidTb.Location = new System.Drawing.Point(372, 81);
+            this.UidTb.MouseState = MaterialSkin.MouseState.HOVER;
+            this.UidTb.Name = "UidTb";
+            this.UidTb.PasswordChar = '\0';
+            this.UidTb.SelectedText = "";
+            this.UidTb.SelectionLength = 0;
+            this.UidTb.SelectionStart = 0;
+            this.UidTb.Size = new System.Drawing.Size(267, 28);
+            this.UidTb.TabIndex = 4;
+            this.UidTb.UseSystemPasswordChar = false;
             // 
             // Label1
             // 
@@ -78,23 +78,23 @@
             this.Label1.TabIndex = 5;
             this.Label1.Text = "Userd ID";
             // 
-            // materialSingleLineTextField1
+            // PassTb
             // 
-            this.materialSingleLineTextField1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.materialSingleLineTextField1.Hint = "";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(372, 140);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(267, 28);
-            this.materialSingleLineTextField1.TabIndex = 6;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
-            this.materialSingleLineTextField1.Click += new System.EventHandler(this.materialSingleLineTextField1_Click);
+            this.PassTb.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.PassTb.Depth = 0;
+            this.PassTb.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.PassTb.Hint = "";
+            this.PassTb.Location = new System.Drawing.Point(372, 140);
+            this.PassTb.MouseState = MaterialSkin.MouseState.HOVER;
+            this.PassTb.Name = "PassTb";
+            this.PassTb.PasswordChar = '\0';
+            this.PassTb.SelectedText = "";
+            this.PassTb.SelectionLength = 0;
+            this.PassTb.SelectionStart = 0;
+            this.PassTb.Size = new System.Drawing.Size(267, 28);
+            this.PassTb.TabIndex = 6;
+            this.PassTb.UseSystemPasswordChar = false;
+            this.PassTb.Click += new System.EventHandler(this.materialSingleLineTextField1_Click);
             // 
             // label2
             // 
@@ -120,6 +120,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -133,6 +134,7 @@
             this.button2.TabIndex = 9;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Login
             // 
@@ -142,9 +144,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.materialSingleLineTextField1);
+            this.Controls.Add(this.PassTb);
             this.Controls.Add(this.Label1);
-            this.Controls.Add(this.materialSingleLineTextField2);
+            this.Controls.Add(this.UidTb);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
@@ -158,9 +160,9 @@
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
+        private MaterialSkin.Controls.MaterialSingleLineTextField UidTb;
         private System.Windows.Forms.Label Label1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
+        private MaterialSkin.Controls.MaterialSingleLineTextField PassTb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
